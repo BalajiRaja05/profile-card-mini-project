@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import ProfileCard from './Components/ProfileCard';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const data =
+    {name : "Elon Musk",
+      city: "America",
+      role:"CEO of Tesla"
+  }
+const skills =["html","css","tailwind","javascript","react","node js","express js","mongoDb","balaji"]
+  
+return (
+    <div className="App flex justify-center py-5">
+        <ProfileCard data={data} skills={skills} />
     </div>
   );
 }
